@@ -7,14 +7,6 @@ public class ApplesMoviment : MonoBehaviour {
 
 	public Vector3	start = new Vector3 (Random.Range (-10.0f,10.0f), 15.0f, Random.Range(-10.0f,10.0f));
 
-
-
-	void Start () {
-
-	}
-
-
-
 	void Update () {
 
 		start = new Vector3 (Random.Range (-10.0f,10.0f), 15.0f, Random.Range(-10.0f,10.0f));
@@ -30,7 +22,7 @@ public class ApplesMoviment : MonoBehaviour {
 
 	void OnTriggerEnter (Collider c) {
 
-		if (c.name == "Player"){
+		if (c.CompareTag ("Player")){
 			transform.position = start;
 			Logic.point++;
 		}	
